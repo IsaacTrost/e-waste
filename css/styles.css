@@ -1,0 +1,180 @@
+/* Reset default margin and padding */
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 15em; /* Same as the width of the sidebar */
+    background-color: greenyellow;
+
+}
+/* Navbar styles */
+
+.content .caption {
+    font-size: smaller;
+    text-align: center;
+}
+
+/* Example navbar item styles */
+.navbar li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: large;
+}
+
+.sidebar p {
+    display: block;
+    padding: 10px;
+    margin-left: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Example active navbar item styles */
+.navbar-item.active {
+    background-color: #ddd;
+}
+
+/* Main content styles */
+.content {
+    margin-top: 25px; /* Adjust this value to match the height of the navbar */
+    padding: 20px;
+    margin-left: auto; /* Center the element horizontally */
+    margin-right: auto; /* Center the element horizontally */
+    max-width: 40em; /* Adjust this value to fit the width of the content */
+    scale: 100%;
+
+}
+
+.content img {
+    display: block;
+    margin-left: auto; /* Center the element horizontally */
+    margin-right: auto; /* Center the element horizontally */
+    width: 70%;
+    height:auto
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 15em;
+    height: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    transition: left 0.3s ease;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.sidebar .close-btn:before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.sidebar .close-btn:hover:before {
+    color: #ff0000;
+}
+
+.sidebar .logo {
+    display: block;
+    margin-left: auto; /* Center the element horizontally */
+    margin-right: auto; /* Center the element horizontally */
+    width: 70%;
+    height:auto
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    color: #ff0000;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    position: fixed;
+    z-index: 9999;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+    visibility: hidden;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 3em;
+    height: .8em;
+    
+    background-color: #333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.citations li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: small;
+}
+
+/* Media query for small screens */
+@media (max-width: 60em) {
+    .sidebar {
+        z-index: 9000;
+        left: -15em;
+    }
+
+    .sidebar.open {
+        left: 0em;
+    }
+
+    .close-btn {
+        visibility: visible;
+    }
+
+    .sidebar-btn{
+        visibility: visible;
+    }
+
+    .hamburger-menu {
+        visibility: visible;
+    }
+
+    body {
+        margin-left: 0;
+    }
+}
